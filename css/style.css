@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --mainBg:#def3fd;
+    --primaryColor:#2757ae;
+    --primaryColorLight:#3b63af;
+
+    --fontColorLight:#fafafa;
+    --fontColorDark:#141414;
+    --black:#0b0b0b;
+
+    --grayBg:#3a3a3a;
+    --grayBgDark:#333333;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    background:var(--mainBg);
+}
+
+.heading{
+    color:var(--black);
+    font-size: 1.2rem;
+}
+/* ------------------ */
+.app{
+    display: flex;
+    gap:2rem;
+    padding:2rem;
+    flex-wrap: wrap;
+}
+.app .citiesArea{
+    /* flex-basis: 20rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    flex: 3;
+}
+.app .citiesArea :is(input, .searchBtn, .getLocationBtn){
+    height: 2.2rem;
+    font-size: 1rem;
+    border-radius: 0.16rem;
+    font-weight: 300;
+}
+.app .citiesArea input{
+    height: 2.2rem;
+    padding: 0 0.6rem;
+    border: 0.05rem solid var(--black);
+    outline: none;
+}
+.app .citiesArea input:focus{
+    outline: 0.1rem solid var(--primaryColor);
+}
+.app .citiesArea .searchBtn{
+    border: none;
+    background: var(--primaryColor);
+    color: var(--fontColorLight);
+    letter-spacing: 0.02rem;
+}
+.app .citiesArea .searchBtn:hover{
+    background: var(--primaryColorLight);
+}
+.app .citiesArea .separator{
+    height: 0.08rem;
+    background-color: var(--grayBg);
+    position: relative;
+}
+.app .citiesArea .separator::after{
+    content: 'OR';
+    padding: 0 .5rem;
+    position:absolute;
+    top: 0;
+    left: 50%;
+    background-color: var(--mainBg);
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+.app .citiesArea .getLocationBtn{
+    border: none;
+    background: var(--grayBg);
+    color: var(--fontColorLight);
+}
+.app .citiesArea .getLocationBtn:hover{
+    background: var(--grayBgDark);
+}
+
+.app .wetherInfoArea{
+    flex: 7;
+}
+.app .wetherInfoArea .wetherHeighlight{
+    gap: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primaryColor);
+    padding: 1.6rem;
+    border-radius: 0.3rem;
+    color: var(--fontColorLight);
+}
+.app .wetherInfoArea .wetherHeighlight .data{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+.app .wetherInfoArea .wetherHeighlight .data .cityName{
+    font-size: 1.8rem;
+}
+.app .wetherInfoArea .wetherHeighlight .data span{
+    font-size: 1rem;
+}
+.app .wetherInfoArea .wetherHeighlight .data .temperature{
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 7rem;
+    display: flex;
+}
+.app .wetherInfoArea .wetherHeighlight .data .temperature span{
+    font-size: 3rem;
+    line-height: 5rem;
+}
+.app .wetherInfoArea .wetherIcon .discription{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+.app .wetherInfoArea .multidaysDataContainer  .heading{
+    margin: 0.5rem 0;
+}
+.app .wetherInfoArea .multidaysData {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+.app .wetherInfoArea .multidaysData .dayData{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    align-items: center;
+    gap: .2rem;
+    color: var(--fontColorLight);
+    padding: 1.2rem 0.5rem;
+    border-radius: 0.4rem;
+    background-color: var(--grayBg);
+    flex: 1;
+}
